@@ -1,0 +1,13 @@
+[functions]
+  directory = "netlify/functions"
+
+# If your site has a build step (e.g., Vite), keep this; otherwise you can delete [build].
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+# If it's a single-page app, keep this redirect; for plain static multi-page sites you can remove it.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
